@@ -1,11 +1,13 @@
 import React from "react";
-// import data from '../data/data.json';
+import data from '../data/data.json';
+import PokeList from './PokeList';
+
 
 class App extends React.Component {
     render() {
         return (
             <div className="App">
-                Hola Mundo
+                <PokeList data={data} />
             </div>
         );
     }
