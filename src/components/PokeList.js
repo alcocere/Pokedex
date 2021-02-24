@@ -3,8 +3,7 @@ import Pokemon from './Pokemon';
 
 class PokeList extends React.Component {
     render() {
-        console.log(this.props.data);
-        const pokemon = this.props.data.map((pokemonItem) => {
+        const pokemon = this.props.pokemons.map((pokemonItem) => {
             return (
                 <li key={pokemonItem.id} >
                     <Pokemon pokemon={pokemonItem} />
