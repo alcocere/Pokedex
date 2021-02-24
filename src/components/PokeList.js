@@ -1,4 +1,5 @@
 import React from "react";
+import Pokemon from './Pokemon';
 
 class PokeList extends React.Component {
     render() {
@@ -6,10 +7,10 @@ class PokeList extends React.Component {
         const pokemon = this.props.data.map((pokemonItem) => {
             return (
                 <li key={pokemonItem.id} >
-                    {pokemonItem.name}
+                    <Pokemon pokemon={pokemonItem} />
                 </li>
-            )
-        })
+            );
+        });
         return (
             <div>
                 <ul>{pokemon}</ul>
