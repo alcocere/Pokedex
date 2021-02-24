@@ -11,10 +11,15 @@ class App extends React.Component {
     }
 
     render() {
-        const pokemonData = this.state.pokemons;
+        const pokemonItem = this.state.pokemons;
         return (
-            <div className="App">
-                <PokeList pokemons={pokemonData} />
+            <div>
+                <header className="app-header">
+                    <h1 className="app-header__title">Mi lista de pokemon</h1>
+                </header>
+                <main className="main-section">
+                    <PokeList pokemons={pokemonItem} />
+                </main>
             </div>
         );
     }
