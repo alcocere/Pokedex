@@ -9,4 +9,7 @@ body {
 	height: 100vh;
 	font-family: "Roboto", sans-serif;
 	margin: 0;
+	background: url("../images/pokeball-background-.jpg") no-repeat bottom / cover
+		fixed;
+	background-size: cover;
 }

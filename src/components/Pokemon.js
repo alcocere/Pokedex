@@ -1,20 +1,29 @@
 import React from 'react';
 
-const Pokemon = (props) => {
-    console.log(props);
-    const pokemonCards = props.pokemon.types.map((type, i) => {
-        return (
-            <li key={i}>{type}</li>
-        )
 
+const Pokemon = props => {
+
+    const handleClick = ev => {
+        // console.log(props.id);
+        // console.log(ev.currentTarget.id);
+        props.handlePokemon(props.id);
+    };
+
+    const typesList = props.types.map((type, index) => {
+        return (
+            <li key={index} className={`card__inner--list card__type--${type}`}>
+                {type}
+            </li>
+        );
     });
+
     return (
-        <article className="card-inner">
-            <img src={props.pokemon.url} alt={props.pokemon.name} className="card-inner__image" />
-            <h2 className="card-inner__title"> {props.pokemon.name} </h2>
-            <ul className="card-inner__list">{pokemonCards}</ul>
-        </article >
-    )
-}
+        <article className="card__inner" id={props.id} onClick={handleClick}>
+            <img className="card__inner--image" src={props.url} alt={'Imagen de ' + props.name} />
+            <h3 className="card__inner--title">{props.name}</h3>
+            <ul className="card__inner--list">{typesList}</ul>
+        </article>
+    );
+};
 
 export default Pokemon;
