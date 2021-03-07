@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 const Pokemon = props => {
@@ -27,3 +28,9 @@ const Pokemon = props => {
 };
 
 export default Pokemon;
+
+Pokemon.propTypes = {
+    typesList: PropTypes.arrayOf(PropTypes.string),
+    url: PropTypes.string,
+    name: PropTypes.string,
+};

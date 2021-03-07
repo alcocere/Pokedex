@@ -1,5 +1,6 @@
 import React from "react";
 import Pokemon from './Pokemon';
+import PropTypes from 'prop-types';
 
 const PokeList = props => {
     const pokeList = props.pokemons.map(pokemon => {
@@ -18,3 +19,8 @@ const PokeList = props => {
 };
 
 export default PokeList;
+Pokemon.propTypes = {
+    id: PropTypes.number,
+    url: PropTypes.string,
+    name: PropTypes.string,
+}

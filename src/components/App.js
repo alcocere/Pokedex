@@ -1,6 +1,7 @@
 import data from '../data/data.json';
 import PokeList from './PokeList';
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
 
 const App = () => {
     const [pokemons] = useState(data);
@@ -46,3 +47,11 @@ const App = () => {
 };
 
 export default App;
+
+App.propTypes = {
+    pokemonData: PropTypes.object,
+    id: PropTypes.number,
+    url: PropTypes.string,
+    name: PropTypes.string,
+    favPokemonIndex: PropTypes.number,
+}
