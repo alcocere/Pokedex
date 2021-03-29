@@ -8,7 +8,7 @@ const App = () => {
     const [favs, setFavs] = useState([]);
 
     const handlePokemon = clickedId => {
-        console.log(clickedId);
+        // console.log(clickedId);
         const favPokemonIndex = favs.findIndex(fav => {
             return fav.id === clickedId;
         });
@@ -25,6 +25,15 @@ const App = () => {
         }
     };
 
+    let favTitle;
+    let noFavs;
+    if (favs.length !== 0) {
+        favTitle = "This are my favorite Pokemons";
+    } else {
+        favTitle = '';
+        noFavs = 'hide'
+    }
+
     return (
         <div>
             <header className="app-header">
@@ -36,7 +45,7 @@ const App = () => {
                 </section>
                 <section className="app-fav">
                     <article>
-                        <h2 className="app-fav_title">This are my favorite Pokemons</h2>
+                        <h2 className={'app-fav_title ' + noFavs}>{favTitle}</h2>
                         <PokeList className="fav-pokemonList" pokemons={favs} handlePokemon={handlePokemon}
                         />
                     </article>
