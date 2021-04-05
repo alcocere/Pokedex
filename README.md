@@ -1,8 +1,6 @@
 # Pokedex
 ### Mid-term assessment at Adalab's programming bootcamp 
 
-![pokedex](https://user-images.githubusercontent.com/75808414/113613599-be0d6b80-9651-11eb-9e0d-f802c4dc39c8.png)
-
 This project shows a list of pokemon, with an individual card for each one, with relevant information, such as name, types and an image. The pokemon information is obtained from an array of data that we include in the state of the App component.
 
 I used React to make this SPA.
@@ -32,3 +30,5 @@ src
 │   └── Pokemon.scss 
 └── index.js
 ```
+
+![Pokedex-](https://user-images.githubusercontent.com/75808414/113623130-35e19300-965e-11eb-8a89-9617962a2159.png)
